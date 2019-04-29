@@ -8,12 +8,16 @@ public class Empleado {
 	private String nombre;
 	private double sueldo;
 	private Date  contrato_in;
+	private int Id;
+	private static int IdSiguiente = 1 ;
 	
 	public Empleado (String nombre, double sueldo, int año_in, int mes_in, int dia_in) {
 		 this.nombre = nombre;
 		 this.sueldo = sueldo;
 		 GregorianCalendar calendario = new GregorianCalendar(año_in, mes_in - 1, dia_in);
 		 contrato_in = calendario.getTime();
+		 Id = IdSiguiente;
+		 IdSiguiente++;
 		 
 	}
 	
@@ -36,6 +40,14 @@ public class Empleado {
 	public void setAumentoSueldo (double porcentaje) {
 		
 		double aumento = (sueldo*porcentaje) / 100;
-		sueldo+= aumento;	}
+		sueldo+= aumento;	
+		}
+	
+	public static int getId () {
+		return Empleado.IdSiguiente;
+	}
+	public  int getId_ () {
+		return Id;
+	}
 
 }

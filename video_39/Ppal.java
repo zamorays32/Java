@@ -21,13 +21,15 @@ public class Ppal {
 		misEmple[2] = new Empleado("Jose", 10000, 2019, 12, 17);
 		misEmple[3] = new Empleado("Jesus");
 		
-		/*for (int i = 0; i < misEmple.length; i++) {
+		for (int i = 0; i < misEmple.length; i++) {
 			
 			System.out.println(misEmple[i].getNombre());
+			System.out.println(misEmple[i].getId_());
 			
-		}*/
+		}
 		for (Empleado e : misEmple) {
-			System.out.println(e.getNombre() + " " + e.getContratoIn());
+			System.out.println(e.getNombre() + " " + e.getContratoIn()  + " ID:" +e.getId_() );
+			
 		}
 	}
 }
