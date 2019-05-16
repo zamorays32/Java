@@ -11,10 +11,10 @@ public class Empleado {
 	private int Id;
 	private static int IdSiguiente = 1 ;
 	
-	public Empleado (String nombre, double sueldo, int año_in, int mes_in, int dia_in) {
+	public Empleado (String nombre, double sueldo, int aÃ±o_in, int mes_in, int dia_in) {
 		 this.nombre = nombre;
 		 this.sueldo = sueldo;
-		 GregorianCalendar calendario = new GregorianCalendar(año_in, mes_in - 1, dia_in);
+		 GregorianCalendar calendario = new GregorianCalendar(aÃ±o_in, mes_in - 1, dia_in);
 		 contrato_in = calendario.getTime();
 		 Id = IdSiguiente;
 		 IdSiguiente++;

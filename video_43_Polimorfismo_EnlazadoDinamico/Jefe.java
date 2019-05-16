@@ -4,9 +4,9 @@ public class Jefe extends Empleado {
 	
 	private double bono;
 	
-	public Jefe (String nombre, double sueldo, int año_in, int mes_in, int dia_in) {
+	public Jefe (String nombre, double sueldo, int aÃ±o_in, int mes_in, int dia_in) {
 		
-		super(nombre,sueldo,año_in,mes_in,dia_in);
+		super(nombre,sueldo,aÃ±o_in,mes_in,dia_in);
 		
 	}
 
