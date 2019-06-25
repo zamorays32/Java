@@ -1,9 +1,9 @@
-package video_43_Polimorfismo_EnlazadoDinamico;
+package video_50_Interfaz;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class Empleado {
+public class Empleado implements Comparable ,  Jefe_Interface {
 	
 	private String nombre;
 	private double sueldo;
@@ -48,6 +48,23 @@ public class Empleado {
 	}
 	public  int getId_ () {
 		return Id;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Empleado e = (Empleado) o ; 
+		 if (this.sueldo <e.sueldo) {
+			 return -1;
+		} if (this.sueldo >e.sueldo) {
+			 return 1;
+		}
+		return 0;
+	}
+
+	@Override
+	public String take_decision(String decition) {
+		// TODO Auto-generated method stub
+		return "Decision Empleado";
 	}
 
 }

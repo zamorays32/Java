@@ -1,6 +1,6 @@
-package video_43_Polimorfismo_EnlazadoDinamico;
+package video_50_Interfaz;
 
-public class Jefe extends Empleado {
+public class Jefe extends Empleado implements Jefe_Interface {
 	
 	private double bono;
 	
@@ -23,6 +23,12 @@ public class Jefe extends Empleado {
 		// TODO Auto-generated method stub
 		double sueldoJefe = super.getSueldo();
 		return sueldoJefe + bono;
+	}
+
+	@Override
+	public String take_decision(String decition) {
+		// TODO Auto-generated method stub
+		return ("Decision tomada" + decition );
 	}
 
 }

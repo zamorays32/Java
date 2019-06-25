@@ -1,9 +1,9 @@
-package video_43_Polimorfismo_EnlazadoDinamico;
+package video_46_Classes.Abstractas;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class Empleado {
+public class Empleado extends Persona {
 	
 	private String nombre;
 	private double sueldo;
@@ -12,7 +12,9 @@ public class Empleado {
 	private static int IdSiguiente = 1 ;
 	
 	public Empleado (String nombre, double sueldo, int año_in, int mes_in, int dia_in) {
-		 this.nombre = nombre;
+		 //this.nombre = nombre;
+		super(nombre);
+		this.nombre = nombre;
 		 this.sueldo = sueldo;
 		 GregorianCalendar calendario = new GregorianCalendar(año_in, mes_in - 1, dia_in);
 		 contrato_in = calendario.getTime();
@@ -26,9 +28,9 @@ public class Empleado {
 		 
 	}
 	
-	public String getNombre() {
+	/*public String getNombre() {
 			return nombre;
-	}
+	}*/
 	public double getSueldo() {
 		return sueldo;
 	}
@@ -48,6 +50,12 @@ public class Empleado {
 	}
 	public  int getId_ () {
 		return Id;
+	}
+
+	@Override
+	public String getDescripcion() {
+		// TODO Auto-generated method stub
+		return "Empleado  " + nombre+" " + Id;
 	}
 
 }

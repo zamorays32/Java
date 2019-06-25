@@ -1,6 +1,6 @@
-package video_43_Polimorfismo_EnlazadoDinamico;
+package video_51_Interfaz_ClasesInternas;
 
-public class Jefe extends Empleado {
+public class Jefe extends Empleado implements Jefe_Interface {
 	
 	private double bono;
 	
@@ -24,5 +24,23 @@ public class Jefe extends Empleado {
 		double sueldoJefe = super.getSueldo();
 		return sueldoJefe + bono;
 	}
+
+	@Override
+	public String take_decision(String decition) {
+		// TODO Auto-generated method stub
+		return ("Decision tomada" + decition );
+	}
+
+	@Override
+	public double setBonus(double bono) {
+		double prima = 1000;
+		
+		
+		return Empleado_Interfaz.bono_base + bono+ prima;
+	}
+
+	
+
+	
 
 }

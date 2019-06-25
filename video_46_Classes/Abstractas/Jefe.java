@@ -1,4 +1,4 @@
-package video_43_Polimorfismo_EnlazadoDinamico;
+package video_46_Classes.Abstractas;
 
 public class Jefe extends Empleado {
 	

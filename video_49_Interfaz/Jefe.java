@@ -1,4 +1,4 @@
-package video_43_Polimorfismo_EnlazadoDinamico;
+package video_49_Interfaz;
 
 public class Jefe extends Empleado {
 	

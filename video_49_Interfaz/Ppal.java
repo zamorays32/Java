@@ -1,4 +1,6 @@
-package video_43_Polimorfismo_EnlazadoDinamico;
+package video_49_Interfaz;
+
+import java.util.Arrays;
 
 public class Ppal {
 
@@ -16,31 +18,34 @@ public class Ppal {
 		*/
 		Jefe  edwin = new Jefe("Edwin", 1000, 2000, 05, 01);
 		edwin.setBono(100);
-		System.out.println(edwin.getBono());
-		System.out.println(edwin.getId_()+ " Edwin " + edwin.getSueldo());
+		//System.out.println(edwin.getBono());
+		//System.out.println(edwin.getId_()+ " Edwin " + edwin.getSueldo());
 		Empleado [] misEmple = new Empleado [6];
 		
-		misEmple[0] = new Empleado("Juan", 10000, 2019, 12, 17);
-		misEmple[1] = new Empleado("Pedro", 10000, 2019, 12, 17);
-		misEmple[2] = new Empleado("Jose", 10000, 2019, 12, 17);
+		misEmple[0] = new Empleado("Juan",  300, 2019, 12, 17);
+		misEmple[1] = new Empleado("Pedro", 100, 2019, 12, 18);
+		misEmple[2] = new Empleado("Jose",  400, 2019, 12, 19);
 		misEmple[3] = new Empleado("Jesus");
 		misEmple[4] = edwin;
 		misEmple[5] = new Jefe ("Sonia", 2000, 2000, 05, 01);
 		
+		Arrays.sort(misEmple);
 		
 		for (Empleado e : misEmple) {
 			e.setAumentoSueldo(10);
 		}
 		
-		for (int i = 0; i < misEmple.length; i++) {
+		/*for (int i = 0; i < misEmple.length; i++) {
 			
 			System.out.println(misEmple[i].getNombre());
 			System.out.println(misEmple[i].getId_());
 			
-		}
+		}*/
+		
+		
 		for (Empleado e : misEmple) {
 			System.out.println(e.getNombre() + " " + e.getContratoIn()  + " ID:" +e.getId_() + "  sueldo"
-					+ "  aumento" + e.getSueldo());
+					+ "   +  aumento  " + e.getSueldo());
 		}
 	}
 }
